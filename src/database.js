@@ -8,3 +8,4 @@ export const studentin = {
   status: "재직중",
 };
 export const m1 = "유경환";
+// \fsdfsdf
