@@ -1,26 +1,14 @@
-import StuForm from "./CMS/StuForm.jsx";
-import StuItem from "./CMS/StuItem";
 import { useState, useEffect } from "react";
-import { studentin } from "./database.js";
-import "./App.css";
-
+import StuForm from "./CMS/StuForm.jsx";
+import StuItem from "./CMS/StuItem.jsx";
+import "./app.css";
 const App = () => {
   // localStorage에서 'users' 데이터를 불러옵니다. 없으면 빈 배열을 기본값으로 사용합니다.
-  // const storedUser = JSON.parse(localStorage.getItem("users"));
-
-  const [users, setUsers] = useState([]);
+  const storedUser = JSON.parse(localStorage.getItem("users"));
+  const [users, setUsers] = useState(storedUser);
   useEffect(() => {
     localStorage.setItem("users", JSON.stringify(users));
-    console.log("updated");
   });
-
-  useEffect(() => {
-    const user = localStorage.getItem("users");
-    if (user) {
-      setUsers(JSON.parse(user));
-    }
-  }, []);
-
   return (
     <>
       <div className="title">
