@@ -12,7 +12,7 @@
 code splitting을 시작하기 좋은 장소는 라우트이다.
 
 2. let과 const 차이:
-   let은 재할당이 가능하지만, const는 재할당이 불가능하다다.
+   let은 재할당이 가능하지만, const는 재할당이 불가능하다.
 
 let count = 0;
 count = 1; // 재할당 가능
