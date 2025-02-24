@@ -8,7 +8,9 @@ const App = () => {
   // localStorage에서 'users' 데이터를 불러옵니다. 없으면 빈 배열을 기본값으로 사용합니다.
   // const storedUser = JSON.parse(localStorage.getItem("users"));
 
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState(
+    JSON.parse(localStorage.getItem("users")) ?? []
+  );
   useEffect(() => {
     localStorage.setItem("users", JSON.stringify(users));
     console.log("updated");
